@@ -1,3 +1,9 @@
+<?php
+
+header("Content-Type: application/json");
+header("Access-Control-Allow-Headers: X-Requested-With");
+header("Access-Control-Allow-Origin: http://localhost:5173");
+
 $todos = [
     [
         'task' => 'Fare la spesa magica',
@@ -20,6 +26,4 @@ $todos = [
 ];
 
 $jsonTodo = json_encode($todos);
-file_put_contents('todos.json', $jsonTodo);
-
-echo "File creato";
+echo $jsonTodo;
